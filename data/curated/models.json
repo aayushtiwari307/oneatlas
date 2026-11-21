@@ -1,0 +1,2396 @@
+[
+  {
+    "slug": "gpt-5-1-openai",
+    "name": "GPT-5.1",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2024-01-01",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT",
+      "WEB_SEARCH"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-5.1. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 0.12,
+        "outputPricePer1M": 0.384,
+        "cachedInputPricePer1M": 0.03,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 350,
+        "throughputTps": 25.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 0.1416,
+        "outputPricePer1M": 0.4531,
+        "cachedInputPricePer1M": 0.036,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 500,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-5-openai",
+    "name": "GPT-5",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2025-04-08",
+    "contextWindow": 65536,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-5. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 0.31,
+        "outputPricePer1M": 1.1315,
+        "cachedInputPricePer1M": 0.0775,
+        "contextWindow": 65536,
+        "maxOutput": 8192,
+        "latencyMs": 405,
+        "throughputTps": 33.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-4-1-openai",
+    "name": "GPT-4.1",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2024-07-15",
+    "contextWindow": 98304,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-4.1. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 0.5,
+        "outputPricePer1M": 2.05,
+        "cachedInputPricePer1M": 0.125,
+        "contextWindow": 98304,
+        "maxOutput": 12288,
+        "latencyMs": 460,
+        "throughputTps": 42.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-4-1-mini-openai",
+    "name": "GPT-4.1 mini",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2025-10-22",
+    "contextWindow": 131072,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-4.1 mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 0.69,
+        "outputPricePer1M": 3.1395,
+        "cachedInputPricePer1M": 0.1725,
+        "contextWindow": 131072,
+        "maxOutput": 16384,
+        "latencyMs": 515,
+        "throughputTps": 50.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-4-1-nano-openai",
+    "name": "GPT-4.1 nano",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2024-01-02",
+    "contextWindow": 200000,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-4.1 nano. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 0.88,
+        "outputPricePer1M": 2.816,
+        "cachedInputPricePer1M": 0.22,
+        "contextWindow": 200000,
+        "maxOutput": 32768,
+        "latencyMs": 570,
+        "throughputTps": 59.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "o3-openai",
+    "name": "o3",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2025-04-09",
+    "contextWindow": 256000,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for o3. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 1.07,
+        "outputPricePer1M": 3.9055,
+        "cachedInputPricePer1M": 0.2675,
+        "contextWindow": 256000,
+        "maxOutput": 4096,
+        "latencyMs": 625,
+        "throughputTps": 67.5,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.2626,
+        "outputPricePer1M": 4.6085,
+        "cachedInputPricePer1M": 0.321,
+        "contextWindow": 256000,
+        "maxOutput": 4096,
+        "latencyMs": 800,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "o4-mini-openai",
+    "name": "o4-mini",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2024-07-16",
+    "contextWindow": 32768,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for o4-mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 1.26,
+        "outputPricePer1M": 5.166,
+        "cachedInputPricePer1M": 0.315,
+        "contextWindow": 32768,
+        "maxOutput": 8192,
+        "latencyMs": 680,
+        "throughputTps": 76.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-4o-openai",
+    "name": "GPT-4o",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2025-10-23",
+    "contextWindow": 65536,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "WEB_SEARCH"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-4o. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 1.45,
+        "outputPricePer1M": 6.5975,
+        "cachedInputPricePer1M": 0.3625,
+        "contextWindow": 65536,
+        "maxOutput": 12288,
+        "latencyMs": 735,
+        "throughputTps": 84.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gpt-4o-mini-openai",
+    "name": "GPT-4o mini",
+    "labSlug": "openai",
+    "type": "CHAT",
+    "releaseDate": "2024-01-03",
+    "contextWindow": 98304,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for GPT-4o mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.64,
+        "outputPricePer1M": 5.248,
+        "cachedInputPricePer1M": 0.41,
+        "contextWindow": 98304,
+        "maxOutput": 16384,
+        "latencyMs": 790,
+        "throughputTps": 93.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "text-embedding-3-large-openai",
+    "name": "text-embedding-3-large",
+    "labSlug": "openai",
+    "type": "EMBEDDING",
+    "releaseDate": "2025-04-10",
+    "contextWindow": 131072,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for text-embedding-3-large. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 1.83,
+        "outputPricePer1M": 6.6795,
+        "cachedInputPricePer1M": 0.4575,
+        "contextWindow": 131072,
+        "maxOutput": 32768,
+        "latencyMs": 350,
+        "throughputTps": 101.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-opus-4-1-anthropic",
+    "name": "Claude Opus 4.1",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2024-07-17",
+    "contextWindow": 200000,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude Opus 4.1. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 2.13,
+        "outputPricePer1M": 8.733,
+        "cachedInputPricePer1M": 0.5325,
+        "contextWindow": 200000,
+        "maxOutput": 4096,
+        "latencyMs": 405,
+        "throughputTps": 110.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 2.5134,
+        "outputPricePer1M": 10.3049,
+        "cachedInputPricePer1M": 0.639,
+        "contextWindow": 200000,
+        "maxOutput": 4096,
+        "latencyMs": 620,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-sonnet-4-5-anthropic",
+    "name": "Claude Sonnet 4.5",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2025-10-24",
+    "contextWindow": 256000,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude Sonnet 4.5. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 0.23,
+        "outputPricePer1M": 1.0465,
+        "cachedInputPricePer1M": 0.0575,
+        "contextWindow": 256000,
+        "maxOutput": 8192,
+        "latencyMs": 460,
+        "throughputTps": 118.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-opus-4-anthropic",
+    "name": "Claude Opus 4",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2024-01-04",
+    "contextWindow": 32768,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude Opus 4. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 0.42,
+        "outputPricePer1M": 1.344,
+        "cachedInputPricePer1M": 0.105,
+        "contextWindow": 32768,
+        "maxOutput": 12288,
+        "latencyMs": 515,
+        "throughputTps": 127.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-sonnet-4-anthropic",
+    "name": "Claude Sonnet 4",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2025-04-11",
+    "contextWindow": 65536,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude Sonnet 4. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 0.61,
+        "outputPricePer1M": 2.2265,
+        "cachedInputPricePer1M": 0.1525,
+        "contextWindow": 65536,
+        "maxOutput": 16384,
+        "latencyMs": 570,
+        "throughputTps": 25.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-3-7-sonnet-anthropic",
+    "name": "Claude 3.7 Sonnet",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2024-07-18",
+    "contextWindow": 98304,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "WEB_SEARCH"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude 3.7 Sonnet. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 0.8,
+        "outputPricePer1M": 3.28,
+        "cachedInputPricePer1M": 0.2,
+        "contextWindow": 98304,
+        "maxOutput": 32768,
+        "latencyMs": 625,
+        "throughputTps": 33.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "claude-3-5-haiku-anthropic",
+    "name": "Claude 3.5 Haiku",
+    "labSlug": "anthropic",
+    "type": "CHAT",
+    "releaseDate": "2025-10-25",
+    "contextWindow": 131072,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Claude 3.5 Haiku. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 0.99,
+        "outputPricePer1M": 4.5045,
+        "cachedInputPricePer1M": 0.2475,
+        "contextWindow": 131072,
+        "maxOutput": 4096,
+        "latencyMs": 680,
+        "throughputTps": 42.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.1682,
+        "outputPricePer1M": 5.3153,
+        "cachedInputPricePer1M": 0.297,
+        "contextWindow": 131072,
+        "maxOutput": 4096,
+        "latencyMs": 920,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-3-pro-google",
+    "name": "Gemini 3 Pro",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2024-01-05",
+    "contextWindow": 200000,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 3 Pro. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 1.29,
+        "outputPricePer1M": 4.128,
+        "cachedInputPricePer1M": 0.3225,
+        "contextWindow": 200000,
+        "maxOutput": 8192,
+        "latencyMs": 735,
+        "throughputTps": 50.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-2-5-pro-google",
+    "name": "Gemini 2.5 Pro",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2025-04-12",
+    "contextWindow": 256000,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 2.5 Pro. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 1.48,
+        "outputPricePer1M": 5.402,
+        "cachedInputPricePer1M": 0.37,
+        "contextWindow": 256000,
+        "maxOutput": 12288,
+        "latencyMs": 790,
+        "throughputTps": 59.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-2-5-flash-google",
+    "name": "Gemini 2.5 Flash",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2024-07-19",
+    "contextWindow": 32768,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 2.5 Flash. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.67,
+        "outputPricePer1M": 6.847,
+        "cachedInputPricePer1M": 0.4175,
+        "contextWindow": 32768,
+        "maxOutput": 16384,
+        "latencyMs": 350,
+        "throughputTps": 67.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-2-5-flash-lite-google",
+    "name": "Gemini 2.5 Flash-Lite",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2025-10-26",
+    "contextWindow": 65536,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 2.5 Flash-Lite. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 1.86,
+        "outputPricePer1M": 8.463,
+        "cachedInputPricePer1M": 0.465,
+        "contextWindow": 65536,
+        "maxOutput": 32768,
+        "latencyMs": 405,
+        "throughputTps": 76.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-2-0-flash-google",
+    "name": "Gemini 2.0 Flash",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2024-01-06",
+    "contextWindow": 98304,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 2.0 Flash. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 2.05,
+        "outputPricePer1M": 6.56,
+        "cachedInputPricePer1M": 0.5125,
+        "contextWindow": 98304,
+        "maxOutput": 4096,
+        "latencyMs": 460,
+        "throughputTps": 84.5,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 2.419,
+        "outputPricePer1M": 7.7408,
+        "cachedInputPricePer1M": 0.615,
+        "contextWindow": 98304,
+        "maxOutput": 4096,
+        "latencyMs": 740,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-2-0-flash-lite-google",
+    "name": "Gemini 2.0 Flash-Lite",
+    "labSlug": "google",
+    "type": "CHAT",
+    "releaseDate": "2025-04-13",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "WEB_SEARCH"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Gemini 2.0 Flash-Lite. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 2.24,
+        "outputPricePer1M": 8.176,
+        "cachedInputPricePer1M": 0.56,
+        "contextWindow": 131072,
+        "maxOutput": 8192,
+        "latencyMs": 515,
+        "throughputTps": 93.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "text-embedding-004-google",
+    "name": "text-embedding-004",
+    "labSlug": "google",
+    "type": "EMBEDDING",
+    "releaseDate": "2024-07-20",
+    "contextWindow": 200000,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for text-embedding-004. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 0.34,
+        "outputPricePer1M": 1.394,
+        "cachedInputPricePer1M": 0.085,
+        "contextWindow": 200000,
+        "maxOutput": 12288,
+        "latencyMs": 570,
+        "throughputTps": 101.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "llama-4-maverick-meta",
+    "name": "Llama 4 Maverick",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2025-10-27",
+    "contextWindow": 256000,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 4 Maverick. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 0.64,
+        "outputPricePer1M": 2.912,
+        "cachedInputPricePer1M": 0.16,
+        "contextWindow": 256000,
+        "maxOutput": 16384,
+        "latencyMs": 625,
+        "throughputTps": 110.0,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "llama-4-scout-meta",
+    "name": "Llama 4 Scout",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2024-01-07",
+    "contextWindow": 32768,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 4 Scout. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 0.83,
+        "outputPricePer1M": 2.656,
+        "cachedInputPricePer1M": 0.2075,
+        "contextWindow": 32768,
+        "maxOutput": 32768,
+        "latencyMs": 680,
+        "throughputTps": 118.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "llama-3-3-70b-meta",
+    "name": "Llama 3.3 70B",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2025-04-14",
+    "contextWindow": 65536,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 3.3 70B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 1.02,
+        "outputPricePer1M": 3.723,
+        "cachedInputPricePer1M": 0.255,
+        "contextWindow": 65536,
+        "maxOutput": 4096,
+        "latencyMs": 735,
+        "throughputTps": 127.0,
+        "quantization": "BF16"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.2036,
+        "outputPricePer1M": 4.3931,
+        "cachedInputPricePer1M": 0.306,
+        "contextWindow": 65536,
+        "maxOutput": 4096,
+        "latencyMs": 560,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "llama-3-1-405b-meta",
+    "name": "Llama 3.1 405B",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2024-07-21",
+    "contextWindow": 98304,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 3.1 405B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 1.21,
+        "outputPricePer1M": 4.961,
+        "cachedInputPricePer1M": 0.3025,
+        "contextWindow": 98304,
+        "maxOutput": 8192,
+        "latencyMs": 790,
+        "throughputTps": 25.0,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "llama-3-1-70b-meta",
+    "name": "Llama 3.1 70B",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2025-10-01",
+    "contextWindow": 131072,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 3.1 70B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 1.4,
+        "outputPricePer1M": 6.37,
+        "cachedInputPricePer1M": 0.35,
+        "contextWindow": 131072,
+        "maxOutput": 12288,
+        "latencyMs": 350,
+        "throughputTps": 33.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "llama-3-1-8b-meta",
+    "name": "Llama 3.1 8B",
+    "labSlug": "meta",
+    "type": "CHAT",
+    "releaseDate": "2024-01-08",
+    "contextWindow": 200000,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "STRUCTURED_OUTPUT",
+      "WEB_SEARCH"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 3.1 8B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.59,
+        "outputPricePer1M": 5.088,
+        "cachedInputPricePer1M": 0.3975,
+        "contextWindow": 200000,
+        "maxOutput": 16384,
+        "latencyMs": 405,
+        "throughputTps": 42.0,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "mistral-large-2-mistral-ai",
+    "name": "Mistral Large 2",
+    "labSlug": "mistral-ai",
+    "type": "CHAT",
+    "releaseDate": "2025-04-15",
+    "contextWindow": 256000,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Mistral Large 2. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 1.45,
+        "outputPricePer1M": 5.2925,
+        "cachedInputPricePer1M": 0.3625,
+        "contextWindow": 256000,
+        "maxOutput": 32768,
+        "latencyMs": 460,
+        "throughputTps": 50.5,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "mistral-medium-3-mistral-ai",
+    "name": "Mistral Medium 3",
+    "labSlug": "mistral-ai",
+    "type": "CHAT",
+    "releaseDate": "2024-07-22",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Mistral Medium 3. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 1.64,
+        "outputPricePer1M": 6.724,
+        "cachedInputPricePer1M": 0.41,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 515,
+        "throughputTps": 59.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 1.9352,
+        "outputPricePer1M": 7.9343,
+        "cachedInputPricePer1M": 0.492,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 860,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "mistral-small-3-2-mistral-ai",
+    "name": "Mistral Small 3.2",
+    "labSlug": "mistral-ai",
+    "type": "CHAT",
+    "releaseDate": "2025-10-02",
+    "contextWindow": 65536,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Mistral Small 3.2. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 1.83,
+        "outputPricePer1M": 8.3265,
+        "cachedInputPricePer1M": 0.4575,
+        "contextWindow": 65536,
+        "maxOutput": 8192,
+        "latencyMs": 570,
+        "throughputTps": 67.5,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "codestral-mistral-ai",
+    "name": "Codestral",
+    "labSlug": "mistral-ai",
+    "type": "CHAT",
+    "releaseDate": "2024-01-09",
+    "contextWindow": 98304,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Codestral. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 2.02,
+        "outputPricePer1M": 6.464,
+        "cachedInputPricePer1M": 0.505,
+        "contextWindow": 98304,
+        "maxOutput": 12288,
+        "latencyMs": 625,
+        "throughputTps": 76.0,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "ministral-8b-mistral-ai",
+    "name": "Ministral 8B",
+    "labSlug": "mistral-ai",
+    "type": "CHAT",
+    "releaseDate": "2025-04-16",
+    "contextWindow": 131072,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "REASONING"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Ministral 8B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 0.12,
+        "outputPricePer1M": 0.438,
+        "cachedInputPricePer1M": 0.03,
+        "contextWindow": 131072,
+        "maxOutput": 16384,
+        "latencyMs": 680,
+        "throughputTps": 84.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek-v3-1-deepseek",
+    "name": "DeepSeek V3.1",
+    "labSlug": "deepseek",
+    "type": "CHAT",
+    "releaseDate": "2024-07-23",
+    "contextWindow": 200000,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for DeepSeek V3.1. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 0.42,
+        "outputPricePer1M": 1.722,
+        "cachedInputPricePer1M": 0.105,
+        "contextWindow": 200000,
+        "maxOutput": 32768,
+        "latencyMs": 735,
+        "throughputTps": 93.0,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek-r1-deepseek",
+    "name": "DeepSeek R1",
+    "labSlug": "deepseek",
+    "type": "CHAT",
+    "releaseDate": "2025-10-03",
+    "contextWindow": 256000,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "WEB_SEARCH"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for DeepSeek R1. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 0.61,
+        "outputPricePer1M": 2.7755,
+        "cachedInputPricePer1M": 0.1525,
+        "contextWindow": 256000,
+        "maxOutput": 4096,
+        "latencyMs": 790,
+        "throughputTps": 101.5,
+        "quantization": "INT8"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 0.7198,
+        "outputPricePer1M": 3.2751,
+        "cachedInputPricePer1M": 0.183,
+        "contextWindow": 256000,
+        "maxOutput": 4096,
+        "latencyMs": 680,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek-v3-deepseek",
+    "name": "DeepSeek V3",
+    "labSlug": "deepseek",
+    "type": "CHAT",
+    "releaseDate": "2024-01-10",
+    "contextWindow": 32768,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for DeepSeek V3. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 0.8,
+        "outputPricePer1M": 2.56,
+        "cachedInputPricePer1M": 0.2,
+        "contextWindow": 32768,
+        "maxOutput": 8192,
+        "latencyMs": 350,
+        "throughputTps": 110.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek-coder-v2-deepseek",
+    "name": "DeepSeek Coder V2",
+    "labSlug": "deepseek",
+    "type": "CHAT",
+    "releaseDate": "2025-04-17",
+    "contextWindow": 65536,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for DeepSeek Coder V2. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 0.99,
+        "outputPricePer1M": 3.6135,
+        "cachedInputPricePer1M": 0.2475,
+        "contextWindow": 65536,
+        "maxOutput": 12288,
+        "latencyMs": 405,
+        "throughputTps": 118.5,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "grok-4-xai",
+    "name": "Grok 4",
+    "labSlug": "xai",
+    "type": "CHAT",
+    "releaseDate": "2024-07-24",
+    "contextWindow": 98304,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Grok 4. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 1.29,
+        "outputPricePer1M": 5.289,
+        "cachedInputPricePer1M": 0.3225,
+        "contextWindow": 98304,
+        "maxOutput": 16384,
+        "latencyMs": 460,
+        "throughputTps": 127.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "grok-3-xai",
+    "name": "Grok 3",
+    "labSlug": "xai",
+    "type": "CHAT",
+    "releaseDate": "2025-10-04",
+    "contextWindow": 131072,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Grok 3. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 1.48,
+        "outputPricePer1M": 6.734,
+        "cachedInputPricePer1M": 0.37,
+        "contextWindow": 131072,
+        "maxOutput": 32768,
+        "latencyMs": 515,
+        "throughputTps": 25.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "grok-3-mini-xai",
+    "name": "Grok 3 Mini",
+    "labSlug": "xai",
+    "type": "CHAT",
+    "releaseDate": "2024-01-11",
+    "contextWindow": 200000,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Grok 3 Mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 1.67,
+        "outputPricePer1M": 5.344,
+        "cachedInputPricePer1M": 0.4175,
+        "contextWindow": 200000,
+        "maxOutput": 4096,
+        "latencyMs": 570,
+        "throughputTps": 33.5,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 1.9706,
+        "outputPricePer1M": 6.3059,
+        "cachedInputPricePer1M": 0.501,
+        "contextWindow": 200000,
+        "maxOutput": 4096,
+        "latencyMs": 500,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "qwen3-235b-a22b-alibaba-qwen",
+    "name": "Qwen3 235B A22B",
+    "labSlug": "alibaba-qwen",
+    "type": "CHAT",
+    "releaseDate": "2025-04-18",
+    "contextWindow": 256000,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Qwen3 235B A22B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 1.97,
+        "outputPricePer1M": 7.1905,
+        "cachedInputPricePer1M": 0.4925,
+        "contextWindow": 256000,
+        "maxOutput": 8192,
+        "latencyMs": 625,
+        "throughputTps": 42.0,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "qwen3-32b-alibaba-qwen",
+    "name": "Qwen3 32B",
+    "labSlug": "alibaba-qwen",
+    "type": "CHAT",
+    "releaseDate": "2024-07-25",
+    "contextWindow": 32768,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "WEB_SEARCH"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Qwen3 32B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 2.16,
+        "outputPricePer1M": 8.856,
+        "cachedInputPricePer1M": 0.54,
+        "contextWindow": 32768,
+        "maxOutput": 12288,
+        "latencyMs": 680,
+        "throughputTps": 50.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "qwen2-5-coder-32b-alibaba-qwen",
+    "name": "Qwen2.5 Coder 32B",
+    "labSlug": "alibaba-qwen",
+    "type": "CHAT",
+    "releaseDate": "2025-10-05",
+    "contextWindow": 65536,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Qwen2.5 Coder 32B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 2.35,
+        "outputPricePer1M": 10.6925,
+        "cachedInputPricePer1M": 0.5875,
+        "contextWindow": 65536,
+        "maxOutput": 16384,
+        "latencyMs": 735,
+        "throughputTps": 59.0,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "qwen2-5-vl-72b-alibaba-qwen",
+    "name": "Qwen2.5 VL 72B",
+    "labSlug": "alibaba-qwen",
+    "type": "CHAT",
+    "releaseDate": "2024-01-12",
+    "contextWindow": 98304,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Qwen2.5 VL 72B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 0.45,
+        "outputPricePer1M": 1.44,
+        "cachedInputPricePer1M": 0.1125,
+        "contextWindow": 98304,
+        "maxOutput": 32768,
+        "latencyMs": 790,
+        "throughputTps": 67.5,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "qwen-turbo-alibaba-qwen",
+    "name": "Qwen Turbo",
+    "labSlug": "alibaba-qwen",
+    "type": "CHAT",
+    "releaseDate": "2025-04-19",
+    "contextWindow": 131072,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Qwen Turbo. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 0.64,
+        "outputPricePer1M": 2.336,
+        "cachedInputPricePer1M": 0.16,
+        "contextWindow": 131072,
+        "maxOutput": 4096,
+        "latencyMs": 350,
+        "throughputTps": 76.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 0.7552,
+        "outputPricePer1M": 2.7565,
+        "cachedInputPricePer1M": 0.192,
+        "contextWindow": 131072,
+        "maxOutput": 4096,
+        "latencyMs": 800,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "command-a-cohere",
+    "name": "Command A",
+    "labSlug": "cohere",
+    "type": "CHAT",
+    "releaseDate": "2024-07-26",
+    "contextWindow": 200000,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Command A. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 0.5,
+        "outputPricePer1M": 2.05,
+        "cachedInputPricePer1M": 0.125,
+        "contextWindow": 200000,
+        "maxOutput": 8192,
+        "latencyMs": 405,
+        "throughputTps": 84.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "command-r-plus-cohere",
+    "name": "Command R+",
+    "labSlug": "cohere",
+    "type": "CHAT",
+    "releaseDate": "2025-10-06",
+    "contextWindow": 256000,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Command R+. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 0.69,
+        "outputPricePer1M": 3.1395,
+        "cachedInputPricePer1M": 0.1725,
+        "contextWindow": 256000,
+        "maxOutput": 12288,
+        "latencyMs": 460,
+        "throughputTps": 93.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "command-r-cohere",
+    "name": "Command R",
+    "labSlug": "cohere",
+    "type": "CHAT",
+    "releaseDate": "2024-01-13",
+    "contextWindow": 32768,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Command R. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 0.88,
+        "outputPricePer1M": 2.816,
+        "cachedInputPricePer1M": 0.22,
+        "contextWindow": 32768,
+        "maxOutput": 16384,
+        "latencyMs": 515,
+        "throughputTps": 101.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "embed-v4-cohere",
+    "name": "Embed v4",
+    "labSlug": "cohere",
+    "type": "EMBEDDING",
+    "releaseDate": "2025-04-20",
+    "contextWindow": 65536,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Embed v4. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 1.07,
+        "outputPricePer1M": 3.9055,
+        "cachedInputPricePer1M": 0.2675,
+        "contextWindow": 65536,
+        "maxOutput": 32768,
+        "latencyMs": 570,
+        "throughputTps": 110.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "jamba-1-5-large-ai21-labs",
+    "name": "Jamba 1.5 Large",
+    "labSlug": "ai21-labs",
+    "type": "CHAT",
+    "releaseDate": "2024-07-27",
+    "contextWindow": 98304,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Jamba 1.5 Large. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 1.37,
+        "outputPricePer1M": 5.617,
+        "cachedInputPricePer1M": 0.3425,
+        "contextWindow": 98304,
+        "maxOutput": 4096,
+        "latencyMs": 625,
+        "throughputTps": 118.5,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 1.6166,
+        "outputPricePer1M": 6.6281,
+        "cachedInputPricePer1M": 0.411,
+        "contextWindow": 98304,
+        "maxOutput": 4096,
+        "latencyMs": 620,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "jamba-1-5-mini-ai21-labs",
+    "name": "Jamba 1.5 Mini",
+    "labSlug": "ai21-labs",
+    "type": "CHAT",
+    "releaseDate": "2025-10-07",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Jamba 1.5 Mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 1.56,
+        "outputPricePer1M": 7.098,
+        "cachedInputPricePer1M": 0.39,
+        "contextWindow": 131072,
+        "maxOutput": 8192,
+        "latencyMs": 680,
+        "throughputTps": 127.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "llama-3-1-nemotron-ultra-253b-nvidia",
+    "name": "Llama 3.1 Nemotron Ultra 253B",
+    "labSlug": "nvidia",
+    "type": "CHAT",
+    "releaseDate": "2024-01-14",
+    "contextWindow": 200000,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Llama 3.1 Nemotron Ultra 253B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "fireworks-ai",
+        "inputPricePer1M": 1.86,
+        "outputPricePer1M": 5.952,
+        "cachedInputPricePer1M": 0.465,
+        "contextWindow": 200000,
+        "maxOutput": 12288,
+        "latencyMs": 735,
+        "throughputTps": 25.0,
+        "quantization": "BF16"
+      }
+    ]
+  },
+  {
+    "slug": "nemotron-nano-9b-nvidia",
+    "name": "Nemotron Nano 9B",
+    "labSlug": "nvidia",
+    "type": "CHAT",
+    "releaseDate": "2025-04-21",
+    "contextWindow": 256000,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Nemotron Nano 9B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 2.05,
+        "outputPricePer1M": 7.4825,
+        "cachedInputPricePer1M": 0.5125,
+        "contextWindow": 256000,
+        "maxOutput": 16384,
+        "latencyMs": 790,
+        "throughputTps": 33.5,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "phi-4-microsoft",
+    "name": "Phi-4",
+    "labSlug": "microsoft",
+    "type": "CHAT",
+    "releaseDate": "2024-07-01",
+    "contextWindow": 32768,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Phi-4. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "deepinfra",
+        "inputPricePer1M": 2.35,
+        "outputPricePer1M": 9.635,
+        "cachedInputPricePer1M": 0.5875,
+        "contextWindow": 32768,
+        "maxOutput": 32768,
+        "latencyMs": 350,
+        "throughputTps": 42.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "phi-4-mini-microsoft",
+    "name": "Phi-4 mini",
+    "labSlug": "microsoft",
+    "type": "CHAT",
+    "releaseDate": "2025-10-08",
+    "contextWindow": 65536,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Phi-4 mini. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "google-vertex-ai",
+        "inputPricePer1M": 0.45,
+        "outputPricePer1M": 2.0475,
+        "cachedInputPricePer1M": 0.1125,
+        "contextWindow": 65536,
+        "maxOutput": 4096,
+        "latencyMs": 405,
+        "throughputTps": 50.5,
+        "quantization": "BF16"
+      },
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 0.531,
+        "outputPricePer1M": 2.4161,
+        "cachedInputPricePer1M": 0.135,
+        "contextWindow": 65536,
+        "maxOutput": 4096,
+        "latencyMs": 920,
+        "throughputTps": 57.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "granite-3-3-8b-ibm",
+    "name": "Granite 3.3 8B",
+    "labSlug": "ibm",
+    "type": "CHAT",
+    "releaseDate": "2024-01-15",
+    "contextWindow": 98304,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "STRUCTURED_OUTPUT",
+      "WEB_SEARCH"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Granite 3.3 8B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "amazon-bedrock",
+        "inputPricePer1M": 0.31,
+        "outputPricePer1M": 0.992,
+        "cachedInputPricePer1M": 0.0775,
+        "contextWindow": 98304,
+        "maxOutput": 8192,
+        "latencyMs": 460,
+        "throughputTps": 59.0,
+        "quantization": "INT8"
+      }
+    ]
+  },
+  {
+    "slug": "granite-3-3-2b-ibm",
+    "name": "Granite 3.3 2B",
+    "labSlug": "ibm",
+    "type": "CHAT",
+    "releaseDate": "2025-04-22",
+    "contextWindow": 131072,
+    "maxOutput": 12288,
+    "inputModalities": [
+      "TEXT"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "REASONING"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Granite 3.3 2B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "azure-ai-foundry",
+        "inputPricePer1M": 0.5,
+        "outputPricePer1M": 1.825,
+        "cachedInputPricePer1M": 0.125,
+        "contextWindow": 131072,
+        "maxOutput": 12288,
+        "latencyMs": 515,
+        "throughputTps": 67.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "nova-pro-amazon",
+    "name": "Nova Pro",
+    "labSlug": "amazon",
+    "type": "CHAT",
+    "releaseDate": "2024-07-02",
+    "contextWindow": 200000,
+    "maxOutput": 16384,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Nova Pro. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "nvidia-nim",
+        "inputPricePer1M": 0.8,
+        "outputPricePer1M": 3.28,
+        "cachedInputPricePer1M": 0.2,
+        "contextWindow": 200000,
+        "maxOutput": 16384,
+        "latencyMs": 570,
+        "throughputTps": 76.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "nova-lite-amazon",
+    "name": "Nova Lite",
+    "labSlug": "amazon",
+    "type": "CHAT",
+    "releaseDate": "2025-10-09",
+    "contextWindow": 256000,
+    "maxOutput": 32768,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": false,
+    "description": "Illustrative catalogue entry for Nova Lite. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "cloudflare-workers-ai",
+        "inputPricePer1M": 0.99,
+        "outputPricePer1M": 4.5045,
+        "cachedInputPricePer1M": 0.2475,
+        "contextWindow": 256000,
+        "maxOutput": 32768,
+        "latencyMs": 625,
+        "throughputTps": 84.5,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "falcon3-10b-tii",
+    "name": "Falcon3 10B",
+    "labSlug": "tii",
+    "type": "CHAT",
+    "releaseDate": "2024-01-16",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION",
+      "REASONING",
+      "STRUCTURED_OUTPUT"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Falcon3 10B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "openrouter",
+        "inputPricePer1M": 1.29,
+        "outputPricePer1M": 4.128,
+        "cachedInputPricePer1M": 0.3225,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 680,
+        "throughputTps": 93.0,
+        "quantization": "FP16"
+      },
+      {
+        "providerSlug": "groq",
+        "inputPricePer1M": 1.5222,
+        "outputPricePer1M": 4.871,
+        "cachedInputPricePer1M": 0.387,
+        "contextWindow": 32768,
+        "maxOutput": 4096,
+        "latencyMs": 740,
+        "throughputTps": 20.0,
+        "quantization": "FP16"
+      }
+    ]
+  },
+  {
+    "slug": "falcon3-7b-tii",
+    "name": "Falcon3 7B",
+    "labSlug": "tii",
+    "type": "CHAT",
+    "releaseDate": "2025-04-23",
+    "contextWindow": 65536,
+    "maxOutput": 8192,
+    "inputModalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "outputModalities": [
+      "TEXT"
+    ],
+    "capabilities": [
+      "TOOLS",
+      "JSON_MODE",
+      "VISION"
+    ],
+    "openWeights": true,
+    "description": "Illustrative catalogue entry for Falcon3 7B. Confirm vendor availability and specifications before relying on this record.",
+    "offerings": [
+      {
+        "providerSlug": "together-ai",
+        "inputPricePer1M": 1.48,
+        "outputPricePer1M": 5.402,
+        "cachedInputPricePer1M": 0.37,
+        "contextWindow": 65536,
+        "maxOutput": 8192,
+        "latencyMs": 735,
+        "throughputTps": 101.5,
+        "quantization": "BF16"
+      }
+    ]
+  }
+]

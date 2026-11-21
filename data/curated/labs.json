@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "openai",
+    "name": "OpenAI",
+    "country": "United States",
+    "website": "https://openai.com/",
+    "description": "AI research and product company developing general-purpose and multimodal models."
+  },
+  {
+    "slug": "anthropic",
+    "name": "Anthropic",
+    "country": "United States",
+    "website": "https://www.anthropic.com/",
+    "description": "AI safety and research company behind the Claude model family."
+  },
+  {
+    "slug": "google",
+    "name": "Google DeepMind",
+    "country": "United States",
+    "website": "https://deepmind.google/",
+    "description": "AI research organization developing Gemini and other frontier models."
+  },
+  {
+    "slug": "meta",
+    "name": "Meta AI",
+    "country": "United States",
+    "website": "https://ai.meta.com/",
+    "description": "AI research organization publishing the Llama family of open-weight models."
+  },
+  {
+    "slug": "mistral-ai",
+    "name": "Mistral AI",
+    "country": "France",
+    "website": "https://mistral.ai/",
+    "description": "AI company building general-purpose, coding and open-weight language models."
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "country": "China",
+    "website": "https://www.deepseek.com/",
+    "description": "AI research company developing language and reasoning models."
+  },
+  {
+    "slug": "xai",
+    "name": "xAI",
+    "country": "United States",
+    "website": "https://x.ai/",
+    "description": "AI company developing the Grok family of models."
+  },
+  {
+    "slug": "alibaba-qwen",
+    "name": "Alibaba Qwen",
+    "country": "China",
+    "website": "https://qwen.ai/",
+    "description": "Alibaba's research and model team developing the Qwen family."
+  },
+  {
+    "slug": "cohere",
+    "name": "Cohere",
+    "country": "Canada",
+    "website": "https://cohere.com/",
+    "description": "Enterprise AI company focused on language and retrieval models."
+  },
+  {
+    "slug": "ai21-labs",
+    "name": "AI21 Labs",
+    "country": "Israel",
+    "website": "https://www.ai21.com/",
+    "description": "AI research company developing language models and enterprise AI systems."
+  },
+  {
+    "slug": "nvidia",
+    "name": "NVIDIA",
+    "country": "United States",
+    "website": "https://www.nvidia.com/",
+    "description": "Computing company developing AI models and accelerated inference technologies."
+  },
+  {
+    "slug": "microsoft",
+    "name": "Microsoft AI",
+    "country": "United States",
+    "website": "https://www.microsoft.com/ai",
+    "description": "Research and product organization developing Phi and other AI models."
+  },
+  {
+    "slug": "ibm",
+    "name": "IBM Research",
+    "country": "United States",
+    "website": "https://research.ibm.com/",
+    "description": "Research organization developing Granite and enterprise AI technologies."
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon AGI",
+    "country": "United States",
+    "website": "https://www.amazon.science/",
+    "description": "Amazon research organization and product teams developing Nova models."
+  },
+  {
+    "slug": "tii",
+    "name": "Technology Innovation Institute",
+    "country": "United Arab Emirates",
+    "website": "https://www.tii.ae/",
+    "description": "Applied research institute developing the Falcon family of language models."
+  }
+]

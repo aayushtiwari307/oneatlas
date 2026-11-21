@@ -9,8 +9,10 @@
     "lint": "eslint",
     "postinstall": "prisma generate",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests",
-    "seed": "tsx prisma/seed.ts"
+    "test": "vitest run",
+    "seed": "tsx prisma/seed.ts",
+    "sync:openrouter": "tsx prisma/sync-openrouter.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
@@ -33,7 +35,8 @@
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5",
-    "vitest": "^5.1.1"
+    "vitest": "^5.1.1",
+    "@playwright/test": "1.65.1"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

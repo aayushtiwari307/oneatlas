@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "openrouter",
+    "name": "OpenRouter",
+    "website": "https://openrouter.ai/",
+    "region": "Global",
+    "description": "Model routing gateway; seed associations and prices are illustrative until synchronized."
+  },
+  {
+    "slug": "together-ai",
+    "name": "Together AI",
+    "website": "https://www.together.ai/",
+    "region": "United States",
+    "description": "Cloud platform for running and fine-tuning open and proprietary models."
+  },
+  {
+    "slug": "fireworks-ai",
+    "name": "Fireworks AI",
+    "website": "https://fireworks.ai/",
+    "region": "United States",
+    "description": "Inference platform for production AI workloads."
+  },
+  {
+    "slug": "groq",
+    "name": "Groq",
+    "website": "https://groq.com/",
+    "region": "United States",
+    "description": "Inference platform using language-processing units for low-latency workloads."
+  },
+  {
+    "slug": "deepinfra",
+    "name": "DeepInfra",
+    "website": "https://deepinfra.com/",
+    "region": "Global",
+    "description": "Hosted inference platform for open models."
+  },
+  {
+    "slug": "google-vertex-ai",
+    "name": "Google Vertex AI",
+    "website": "https://cloud.google.com/vertex-ai",
+    "region": "Global",
+    "description": "Google Cloud platform for building and serving AI applications."
+  },
+  {
+    "slug": "amazon-bedrock",
+    "name": "Amazon Bedrock",
+    "website": "https://aws.amazon.com/bedrock/",
+    "region": "Global",
+    "description": "AWS managed service for accessing foundation models."
+  },
+  {
+    "slug": "azure-ai-foundry",
+    "name": "Azure AI Foundry",
+    "website": "https://azure.microsoft.com/products/ai-foundry",
+    "region": "Global",
+    "description": "Microsoft platform for building and deploying AI applications."
+  },
+  {
+    "slug": "nvidia-nim",
+    "name": "NVIDIA NIM",
+    "website": "https://www.nvidia.com/en-us/ai/",
+    "region": "Global",
+    "description": "NVIDIA inference microservices and model deployment platform."
+  },
+  {
+    "slug": "cloudflare-workers-ai",
+    "name": "Cloudflare Workers AI",
+    "website": "https://developers.cloudflare.com/workers-ai/",
+    "region": "Global",
+    "description": "Serverless inference platform integrated with Cloudflare's developer platform."
+  }
+]

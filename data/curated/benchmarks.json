@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "mmlu-pro",
+    "name": "MMLU-Pro",
+    "category": "KNOWLEDGE",
+    "description": "Broad multi-discipline knowledge and reasoning evaluation. Demo scores are illustrative.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "sourceUrl": "https://arxiv.org/abs/2406.01574"
+  },
+  {
+    "slug": "gpqa-diamond",
+    "name": "GPQA Diamond",
+    "category": "REASONING",
+    "description": "Graduate-level, expert-written science question benchmark. Demo scores are illustrative.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "sourceUrl": "https://arxiv.org/abs/2311.12022"
+  },
+  {
+    "slug": "swe-bench-verified",
+    "name": "SWE-bench Verified",
+    "category": "CODING",
+    "description": "Software engineering benchmark using verified GitHub issue tasks. Demo scores are illustrative.",
+    "unit": "% resolved",
+    "higherIsBetter": true,
+    "sourceUrl": "https://www.swebench.com/"
+  },
+  {
+    "slug": "humaneval",
+    "name": "HumanEval",
+    "category": "CODING",
+    "description": "Python programming benchmark commonly reported using pass@1. Demo scores are illustrative.",
+    "unit": "pass@1 %",
+    "higherIsBetter": true,
+    "sourceUrl": "https://github.com/openai/human-eval"
+  },
+  {
+    "slug": "aime-2025",
+    "name": "AIME 2025",
+    "category": "MATH",
+    "description": "Competition mathematics evaluation based on AIME 2025 problems. Demo scores are illustrative.",
+    "unit": "% correct",
+    "higherIsBetter": true,
+    "sourceUrl": "https://maa.org/math-competitions/american-invitational-mathematics-examination-aime"
+  },
+  {
+    "slug": "mmmu",
+    "name": "MMMU",
+    "category": "MULTIMODAL",
+    "description": "Massive multi-discipline multimodal understanding benchmark. Demo scores are illustrative.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "sourceUrl": "https://mmmu-benchmark.github.io/"
+  },
+  {
+    "slug": "chatbot-arena-elo",
+    "name": "Chatbot Arena Elo",
+    "category": "GENERAL",
+    "description": "Preference-based model comparison rating. Demo ratings are illustrative and are not leaderboard results.",
+    "unit": "Elo",
+    "higherIsBetter": true,
+    "sourceUrl": "https://lmarena.ai/leaderboard"
+  },
+  {
+    "slug": "tau-bench",
+    "name": "τ-bench",
+    "category": "AGENTIC",
+    "description": "Tool-agent benchmark for realistic user interactions. Demo scores are illustrative.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "sourceUrl": "https://arxiv.org/abs/2406.12045"
+  }
+]

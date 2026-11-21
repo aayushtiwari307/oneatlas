@@ -1,0 +1,562 @@
+[
+  {
+    "modelSlug": "gpt-5-1-openai",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 38.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-5-openai",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 51.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-openai",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 64.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-opus-4-1-anthropic",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 50.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-sonnet-4-5-anthropic",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 63.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-3-pro-google",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 69.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-pro-google",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 82.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-4-maverick-meta",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 42.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "mistral-large-2-mistral-ai",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 61.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "deepseek-v3-1-deepseek",
+    "benchmarkSlug": "mmlu-pro",
+    "score": 67.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-mini-openai",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 96.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-nano-openai",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 50.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "o3-openai",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 63.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-opus-4-anthropic",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 95.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-sonnet-4-anthropic",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 49.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-flash-google",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 55.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-flash-lite-google",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 68.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-3-70b-meta",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 87.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "mistral-medium-3-mistral-ai",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 93.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "deepseek-r1-deepseek",
+    "benchmarkSlug": "gpqa-diamond",
+    "score": 40.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "o4-mini-openai",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 95.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4o-openai",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 49.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4o-mini-openai",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 62.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-3-7-sonnet-anthropic",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 81.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-3-5-haiku-anthropic",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 94.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-0-flash-google",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 41.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-0-flash-lite-google",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 54.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-405b-meta",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 60.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "mistral-small-3-2-mistral-ai",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 66.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "deepseek-v3-deepseek",
+    "benchmarkSlug": "swe-bench-verified",
+    "score": 72.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "text-embedding-3-large-openai",
+    "benchmarkSlug": "humaneval",
+    "score": 94.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "text-embedding-004-google",
+    "benchmarkSlug": "humaneval",
+    "score": 86.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-4-scout-meta",
+    "benchmarkSlug": "humaneval",
+    "score": 53.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-70b-meta",
+    "benchmarkSlug": "humaneval",
+    "score": 92.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-8b-meta",
+    "benchmarkSlug": "humaneval",
+    "score": 46.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "codestral-mistral-ai",
+    "benchmarkSlug": "humaneval",
+    "score": 39.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "ministral-8b-mistral-ai",
+    "benchmarkSlug": "humaneval",
+    "score": 52.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "deepseek-coder-v2-deepseek",
+    "benchmarkSlug": "humaneval",
+    "score": 45.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "grok-4-xai",
+    "benchmarkSlug": "humaneval",
+    "score": 58.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "grok-3-xai",
+    "benchmarkSlug": "humaneval",
+    "score": 71.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "grok-3-mini-xai",
+    "benchmarkSlug": "aime-2025",
+    "score": 44.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "qwen3-235b-a22b-alibaba-qwen",
+    "benchmarkSlug": "aime-2025",
+    "score": 57.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "qwen3-32b-alibaba-qwen",
+    "benchmarkSlug": "aime-2025",
+    "score": 70.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "qwen2-5-coder-32b-alibaba-qwen",
+    "benchmarkSlug": "aime-2025",
+    "score": 83.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "qwen2-5-vl-72b-alibaba-qwen",
+    "benchmarkSlug": "aime-2025",
+    "score": 96.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "qwen-turbo-alibaba-qwen",
+    "benchmarkSlug": "aime-2025",
+    "score": 50.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "command-a-cohere",
+    "benchmarkSlug": "aime-2025",
+    "score": 63.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "command-r-plus-cohere",
+    "benchmarkSlug": "aime-2025",
+    "score": 76.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "command-r-cohere",
+    "benchmarkSlug": "aime-2025",
+    "score": 89.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "embed-v4-cohere",
+    "benchmarkSlug": "aime-2025",
+    "score": 43.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-5-1-openai",
+    "benchmarkSlug": "mmmu",
+    "score": 74.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-mini-openai",
+    "benchmarkSlug": "mmmu",
+    "score": 54.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "o4-mini-openai",
+    "benchmarkSlug": "mmmu",
+    "score": 93.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "text-embedding-3-large-openai",
+    "benchmarkSlug": "mmmu",
+    "score": 73.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-opus-4-anthropic",
+    "benchmarkSlug": "mmmu",
+    "score": 53.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-3-5-haiku-anthropic",
+    "benchmarkSlug": "mmmu",
+    "score": 92.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-flash-google",
+    "benchmarkSlug": "mmmu",
+    "score": 72.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-0-flash-lite-google",
+    "benchmarkSlug": "mmmu",
+    "score": 52.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-4-scout-meta",
+    "benchmarkSlug": "mmmu",
+    "score": 91.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-70b-meta",
+    "benchmarkSlug": "mmmu",
+    "score": 71.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-5-openai",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1253,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-nano-openai",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1346,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4o-openai",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1179,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-opus-4-1-anthropic",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1272,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-sonnet-4-anthropic",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1365,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-3-pro-google",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1198,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-flash-lite-google",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1291,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "text-embedding-004-google",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1124,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-3-70b-meta",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1217,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-8b-meta",
+    "benchmarkSlug": "chatbot-arena-elo",
+    "score": 1310,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4-1-openai",
+    "benchmarkSlug": "tau-bench",
+    "score": 79.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "o3-openai",
+    "benchmarkSlug": "tau-bench",
+    "score": 59.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gpt-4o-mini-openai",
+    "benchmarkSlug": "tau-bench",
+    "score": 39.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-sonnet-4-5-anthropic",
+    "benchmarkSlug": "tau-bench",
+    "score": 78.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "claude-3-7-sonnet-anthropic",
+    "benchmarkSlug": "tau-bench",
+    "score": 58.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-5-pro-google",
+    "benchmarkSlug": "tau-bench",
+    "score": 38.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "gemini-2-0-flash-google",
+    "benchmarkSlug": "tau-bench",
+    "score": 77.0,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-4-maverick-meta",
+    "benchmarkSlug": "tau-bench",
+    "score": 57.3,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "llama-3-1-405b-meta",
+    "benchmarkSlug": "tau-bench",
+    "score": 96.6,
+    "source": "illustrative",
+    "measuredAt": null
+  },
+  {
+    "modelSlug": "mistral-large-2-mistral-ai",
+    "benchmarkSlug": "tau-bench",
+    "score": 76.0,
+    "source": "illustrative",
+    "measuredAt": null
+  }
+]
