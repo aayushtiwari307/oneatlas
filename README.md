@@ -1,255 +1,479 @@
+ <div align="center">
+
 # OneAtlas
 
-**OneAtlas** is an AI model discovery and intelligence platform for developers, AI engineers and researchers. It brings model discovery, provider pricing, model comparisons, benchmark rankings, AI lab/provider directories and price-oriented insights into one searchable catalogue.
+### Discover. Evaluate. Compare.
 
-> **Project status (21 November 2026):** the owner reports that local TypeScript, ESLint, Vitest and production-build checks pass. Neon migrations/seeding, database-backed HTTP checks, Playwright browser tests, Vercel deployment and the final visual/accessibility walkthrough are deliberately still pending. Do not treat this repository as production-deployed until those checks are completed.
+**A unified AI model discovery and intelligence workspace for developers, AI engineers, and researchers.**
 
-## What the MVP includes
+Explore model capabilities, inspect provider offerings, compare models side by side, and navigate benchmark categories from one searchable catalogue.
 
-- **Model discovery:** searchable, filterable and sortable catalogue with pagination and grid/table layouts.
-- **Model details:** specifications, modalities, capabilities, active provider offerings, benchmark scores and related models.
-- **Model comparison:** shareable side-by-side comparisons for two to four models, with best-value highlighting.
-- **Rankings:** category and benchmark leaderboards with direction-aware score ordering and competition ranks.
-- **Labs and providers:** searchable directories, detail pages and provider-specific model pricing.
-- **Global search:** Cmd/Ctrl+K search palette with grouped model, lab and provider results.
-- **Insights:** price/performance scatter plot, monthly token-cost estimator and cheapest-input-provider indicators.
+<br />
 
-## Technology stack
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20OneAtlas-2563eb?style=for-the-badge&logo=render&logoColor=white)](https://oneatlas-glty.onrender.com)
+[![CI](https://img.shields.io/badge/CI-GitHub%20Actions-success?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/aayushtiwari307/oneatlas/actions)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech/)
 
-| Area | Technology |
+<br />
+
+**[Try the live application](https://oneatlas-glty.onrender.com) · [Explore the source code](https://github.com/aayushtiwari307/oneatlas) · [Technical decisions](docs/DECISIONS.md)**
+
+</div>
+
+---
+
+## The idea
+
+Choosing an AI model is rarely just a matter of picking the newest or most popular name. Developers often need to weigh capability, context size, provider availability, cost, and benchmark results—and that information is spread across model catalogs, provider pages, and leaderboards.
+
+**OneAtlas brings those discovery and evaluation tasks into one place.**
+
+It provides a searchable model catalogue, detailed model profiles, side-by-side comparisons, rankings, AI lab and provider directories, and price-oriented insights.
+
+> **Data transparency:** OneAtlas currently ships with a curated demo dataset. Some model specifications, provider associations, prices, and benchmark scores are illustrative rather than vendor-verified or live quotes. See [Data provenance and limitations](#data-provenance--limitations).
+
+## Product features
+
+| Feature | Description |
 |---|---|
-| Web application | Next.js 16 App Router, React 19, TypeScript (strict) |
-| Styling | Tailwind CSS 4 |
-| API | Next.js Route Handlers, Node.js, TypeScript, Zod 4 |
-| Data access | PostgreSQL, Prisma ORM 6 |
-| Client data fetching | TanStack Query 5 |
-| URL state | nuqs |
-| Unit tests | Vitest |
-| Browser smoke tests | Playwright (Chromium) |
-| Deployment target | Vercel + Neon PostgreSQL |
+| **Model Explorer** | Search, filter, sort, and paginate through AI models. Switch between grid and table views. |
+| **Model Details** | Inspect model specifications, modalities, capabilities, provider offerings, and benchmark information. |
+| **Model Comparison** | Add models to a comparison tray and compare 2–4 models side by side. Share comparisons through URLs. |
+| **Rankings & Benchmarks** | Explore benchmark leaderboards by category with direction-aware ordering and competition ranks. |
+| **AI Labs Directory** | Discover organizations behind the models and explore their model catalogues. |
+| **Inference Providers** | Browse inference providers and inspect their associated model offerings and prices. |
+| **Global Search** | Use the Cmd/Ctrl + K command palette to search models, labs, and providers. |
+| **Price & Usage Insights** | Explore price/performance data, estimate monthly token costs, and identify lower-priced provider offerings. |
 
-Versions are pinned or constrained in `package.json`. Prisma and `@prisma/client` intentionally remain on major version 6 to match the assignment's architecture and schema.
+### A typical user journey
+
+1. Search for a model or narrow the catalogue using lab, provider, type, context, or price filters.
+2. Open a model detail page to understand its specifications and listed offerings.
+3. Add alternatives to the comparison tray and inspect them side by side.
+4. Use rankings and price-oriented insights as additional evaluation signals.
+
+---
 
 ## Architecture
 
-The application keeps transport, validation, business logic and persistence separate. Interactive browser features call the actual `/api` routes; server-rendered pages may call services directly for their first render. Prisma rows are mapped to API DTOs, and Decimal-to-number conversion happens at the mapper boundary.
+OneAtlas separates the user interface, request validation, business logic, data access, and DTO mapping into distinct layers.
 
 ```mermaid
 flowchart TD
-  U[Browser / User] --> UI[Next.js App Router UI]
-  UI --> URL[nuqs URL state]
-  UI --> TQ[TanStack Query]
-  TQ --> RH[Route Handler]
-  RH --> Z[Zod validation]
-  Z --> S[Service]
-  S --> R[Repository]
-  R --> P[Prisma 6]
-  P --> DB[(PostgreSQL / Neon)]
-  UI -->|Server Component first render| S
-  ING[Curated JSON / optional OpenRouter sync] --> VAL[Zod + normalizers]
-  VAL --> SEED[Seed / ingestion runner]
-  SEED --> P
-  DB --> TR[Search vector trigger + pg_trgm]
+    U[Browser / User] --> UI[Next.js App Router]
+    UI --> URL[nuqs URL State]
+    UI --> TQ[TanStack Query]
+    TQ --> API[Route Handlers]
+    API --> Z[Zod Validation]
+    Z --> S[Services]
+    S --> R[Repositories]
+    R --> P[Prisma ORM]
+    P --> DB[(Neon PostgreSQL)]
+
+    UI -->|Server-rendered initial view| S
+
+    CJ[Curated JSON Fixtures] --> V[Zod Schemas and Normalizers]
+    OR[Optional OpenRouter Sync] --> V
+    V --> ING[Ingestion Runner]
+    ING --> P
+
+    DB --> FTS[PostgreSQL Full-text Search]
+    DB --> TRGM[pg_trgm Typo-tolerant Search]
 ```
 
-### Request and data flow
+### Backend request lifecycle
 
-1. **Route Handler:** reads request parameters and delegates through the shared `route(...)` wrapper.
-2. **Validation:** Zod parses and rejects malformed or unknown user-controlled query inputs.
-3. **Service:** applies product rules such as default sorting, comparison alignment and competition ranking.
-4. **Repository:** performs Prisma/PostgreSQL queries; raw SQL uses tagged `$queryRaw` templates.
-5. **Mapper:** returns stable DTOs, converts Prisma `Decimal` to numbers and serializes dates.
-6. **UI:** server components render initial data; interactive search, filters, compare and the command palette use TanStack Query against the API. nuqs keeps shareable state in the URL.
+Database-backed API requests follow a consistent flow:
 
-### Database and search design
+1. **Route handler:** Receives the request and delegates through the shared route wrapper.
+2. **Validation:** Zod parses query parameters and rejects invalid inputs.
+3. **Service layer:** Applies business rules such as sorting, comparison alignment, and ranking behavior.
+4. **Repository layer:** Performs Prisma/PostgreSQL reads and writes.
+5. **Mapper layer:** Converts database records into stable DTOs, including Decimal-to-number conversion and date serialization.
+6. **Client interface:** Consumes API data with TanStack Query, while nuqs keeps relevant search and filter state in the URL.
 
-- `ModelProvider` stores provider-specific input/output prices as PostgreSQL `Decimal` values per one million tokens.
-- `Model.minInputPrice` and `Model.minOutputPrice` are denormalized values derived from the same cheapest active offering so filtering and price sorting do not need to aggregate offerings for every catalogue query.
-- PostgreSQL full-text search uses a trigger-maintained `tsvector`; `pg_trgm` supports typo-tolerant model-name matching.
-- The search trigger and trigram extension are added to the generated migration using `prisma/sql/search_setup.sql` (instructions below).
-- Read endpoints use the shared success/error envelope and cache headers defined by the API contract. Database-backed route segments remain dynamic; the Next.js `cacheComponents` option is disabled because it conflicts with the project's required `force-dynamic` route-segment configuration.
+### Engineering highlights
 
-## Repository map
+- PostgreSQL full-text search uses a trigger-maintained `tsvector` search column.
+- The `pg_trgm` extension supports typo-tolerant model-name matching.
+- Provider prices are stored using PostgreSQL `Decimal` values per one million tokens.
+- Lowest active provider prices are recomputed for efficient catalogue sorting and filtering.
+- Model comparison preserves the order requested by the user.
+- Rankings account for whether a benchmark is higher-is-better or lower-is-better and use competition ranking for ties.
+- Database access is separated from API validation and business logic.
+
+---
+
+## Technology stack
+
+| Layer | Technology |
+|---|---|
+| Application | Next.js 16 App Router, React 19, TypeScript (strict) |
+| Styling | Tailwind CSS 4 |
+| Backend | Node.js, Next.js Route Handlers, Zod 4 |
+| Database | PostgreSQL on Neon |
+| ORM | Prisma 6 |
+| Client data management | TanStack Query 5 |
+| URL state | nuqs |
+| Unit testing | Vitest |
+| Browser testing | Playwright with Chromium |
+| Continuous integration | GitHub Actions |
+| Hosting | Render Node.js Web Service |
+
+---
+
+## Repository structure
 
 ```text
-prisma/
-  schema.prisma
-  sql/search_setup.sql
-  seed.ts
-  sync-openrouter.ts
-
-data/curated/                 Offline curated fixture JSON + provenance note
-docs/
-  SPEC.md                     API/data/UI contracts
-  DECISIONS.md                Technical decision log
-  FINAL_TEST_PLAN.md          Owner-run acceptance checklist
-  LOOM_SCRIPT.md              Suggested recording outline
-src/
-  app/api/                    Thin Route Handlers
-  app/                        Pages and layouts
-  components/                 UI and feature components
-  features/                   Client-side state and pure UI logic
-  lib/api/                    Shared API envelope and handler helpers
-  lib/validators/             Zod request schemas
-  server/repositories/        Prisma queries
-  server/services/            Business logic
-  server/mappers/             Database-to-DTO mapping
-  server/ingestion/           Seed/OpenRouter ingestion and normalization
-  types/                      Shared DTO contracts
-tests/e2e/                    Playwright smoke tests
-.github/workflows/ci.yml      Database-independent CI
+oneatlas/
+├── .github/
+│   └── workflows/            # GitHub Actions CI
+├── data/
+│   └── curated/              # Offline demo fixtures and provenance notes
+├── docs/                     # Technical decisions and project documentation
+├── prisma/
+│   ├── migrations/           # Committed database migrations
+│   ├── sql/                  # Search extension and trigger SQL
+│   ├── schema.prisma         # Database schema
+│   ├── seed.ts               # Curated seed entry point
+│   └── sync-openrouter.ts    # Optional external catalogue enrichment
+├── public/                   # Static assets
+├── src/
+│   ├── app/                  # Pages, layouts, and API handlers
+│   ├── components/           # Shared UI components
+│   ├── features/             # Feature-specific UI and pure logic
+│   ├── lib/                  # Helpers, query utilities, validators
+│   ├── server/
+│   │   ├── ingestion/        # Source schemas, normalizers, ingestion
+│   │   ├── mappers/          # Database-to-DTO mapping
+│   │   ├── repositories/     # Prisma data access
+│   │   └── services/         # Application business logic
+│   └── types/                # Shared DTO contracts
+├── tests/
+│   └── e2e/                  # Playwright smoke tests
+├── .env.example              # Environment variable template
+├── MILESTONES.md             # Project milestone tracker
+└── README.md
 ```
 
-## Local setup
+---
 
-### Requirements
+## Getting started
 
-- Node.js 22 or later.
-- npm.
-- A PostgreSQL database. Neon is the intended hosted option.
-- Git.
+### Prerequisites
 
-### Install
+- Node.js 22 or later
+- npm
+- PostgreSQL database
+- Git
+
+The deployed application uses [Neon](https://neon.tech/) for hosted PostgreSQL.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/aayushtiwari307/oneatlas.git
+
+cd oneatlas
+```
+
+### 2. Install dependencies
+
+```bash
+npm ci
+```
+
+The project's post-install script generates the Prisma Client.
+
+### 3. Configure environment variables
+
+Create your local `.env` file:
+
+**Windows PowerShell**
 
 ```powershell
-npm install
+Copy-Item .env.example .env
 ```
 
-For a clean checkout after the lockfile has been committed, prefer `npm ci` to reproduce the locked dependency graph.
-
-Copy `.env.example` to `.env` and set the two connection strings. Use the Neon **pooled** connection for application queries and the **direct** connection for Prisma migrations:
+Configure the database connection strings:
 
 ```dotenv
 DATABASE_URL="YOUR_NEON_POOLED_CONNECTION_STRING"
+
 DIRECT_URL="YOUR_NEON_DIRECT_CONNECTION_STRING"
 ```
 
-Never commit `.env` or paste database credentials into issues, chat messages or Loom recordings.
+Use the pooled Neon connection string for `DATABASE_URL` and the direct connection string for `DIRECT_URL`.
 
-### Create the database schema
+Keep `.env` private. Database credentials must never be committed to GitHub or included in screenshots and recordings.
 
-The project uses Prisma 6 and PostgreSQL. The search extension and trigger SQL must be included in the initial migration:
+### 4. Apply database migrations
 
-```powershell
-npx prisma migrate dev --name init --create-only
-```
+For a fresh development database:
 
-Open the generated `prisma/migrations/*_init/migration.sql` and:
-
-1. Prepend **Part 1** from `prisma/sql/search_setup.sql` (the `pg_trgm` extension).
-2. Append **Part 2** from `prisma/sql/search_setup.sql` (the model search-vector function and trigger).
-3. Save the migration, then apply it:
-
-```powershell
+```bash
 npx prisma migrate dev
-npx prisma generate
 ```
 
-For production, apply committed migrations with `npx prisma migrate deploy`; do not use `migrate dev` against production.
+For an existing production database:
 
-### Seed curated data
+```bash
+npx prisma migrate deploy
+```
 
-```powershell
+Do not use `migrate dev` against production.
+
+### 5. Seed the catalogue
+
+```bash
 npm run seed
 ```
 
-The seed reads local JSON files and does not need the OpenRouter API. A reachable PostgreSQL database is still required because the command writes those records into the database. Seeding is designed to be idempotent.
+The curated seed reads local JSON fixtures and upserts the catalogue into PostgreSQL. It requires a reachable database.
 
-Optional external enrichment:
+Optional OpenRouter enrichment can be run separately:
 
-```powershell
+```bash
 npm run sync:openrouter
 ```
 
-This requires network access and is not required to bootstrap the app. It must not delete curated rows.
+This optional integration is not required to bootstrap the application.
 
-### Run the app
+### 6. Start the development server
 
-```powershell
+```bash
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open:
 
-## Quality checks
+**http://localhost:3000**
 
-The owner reports these local checks passed on 21 November 2026 after applying the M8 root integration fix:
+---
+
+## API overview
+
+OneAtlas exposes the following read endpoints:
+
+| Endpoint | Purpose |
+|---|---|
+| `GET /api/health` | Database connectivity check. |
+| `GET /api/models` | Model search, filtering, sorting, and pagination. |
+| `GET /api/models/[slug]` | Individual model details. |
+| `GET /api/models/compare?slugs=a,b` | Compare two to four models. |
+| `GET /api/search?q=...` | Grouped model, lab, and provider search. |
+| `GET /api/rankings` | Benchmark leaderboard. |
+| `GET /api/benchmarks` | Benchmark catalogue and model counts. |
+| `GET /api/labs` | AI lab directory. |
+| `GET /api/labs/[slug]` | Individual lab details. |
+| `GET /api/providers` | Inference provider directory. |
+| `GET /api/providers/[slug]` | Individual provider details. |
+| `GET /api/filters` | Global filter options, counts, and ranges. |
+| `GET /api/insights/price-performance` | Benchmark scores and blended-price insights. |
+
+### Response conventions
+
+Successful responses use:
+
+```json
+{
+  "data": [],
+  "meta": {}
+}
+```
+
+Error responses use:
+
+```json
+{
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Description of the error"
+  }
+}
+```
+
+Query parameters are validated using Zod schemas.
+
+### Quick API checks
+
+With the local application running:
 
 ```powershell
+Invoke-RestMethod "http://localhost:3000/api/health" |
+  ConvertTo-Json -Depth 5
+
+Invoke-RestMethod "http://localhost:3000/api/models?limit=5" |
+  ConvertTo-Json -Depth 5
+
+Invoke-RestMethod "http://localhost:3000/api/filters" |
+  ConvertTo-Json -Depth 5
+```
+
+A healthy database-backed health response returns `data.status` as `ok` and `data.db` as `true`.
+
+---
+
+## Testing and quality
+
+OneAtlas includes unit tests, browser-based end-to-end tests, static analysis, and production-build verification.
+
+### Run the verification suite
+
+```bash
 npm run typecheck
 npm run lint
 npm test
 npm run build
 ```
 
-Reported results: TypeScript passed, ESLint passed, Vitest passed **146 tests across 27 files**, and the Next.js production build completed. These local checks do not prove that the PostgreSQL schema is migrated, that database-backed APIs return data, or that the browser workflows pass against a seeded catalogue.
+### End-to-end tests
 
-Playwright tests require `@playwright/test`, a Chromium installation, and a migrated/seeded database (or a configured deployed target):
+The Playwright smoke suite requires a migrated and seeded database and Chromium:
 
-```powershell
+```bash
 npx playwright install chromium
+
 npm run test:e2e
 ```
 
-The E2E suite contains two smoke paths: model search/filter/detail/add-to-compare, and two-model comparison. It is intentionally separate from the database-independent unit suite.
+The browser tests cover:
 
-## API overview
+1. Model search, filtering, opening a model detail page, and adding the model to comparison.
+2. Adding two models and rendering the shareable comparison page.
 
-| Endpoint | Purpose |
+To run the browser tests against the hosted application:
+
+```powershell
+$env:PLAYWRIGHT_BASE_URL = "https://oneatlas-glty.onrender.com"
+
+npm run test:e2e
+```
+
+### Latest verified results
+
+<details>
+<summary><strong>Verification results — 21 November 2026</strong></summary>
+
+| Check | Result |
 |---|---|
-| `GET /api/health` | Database connectivity probe (`SELECT 1`) |
-| `GET /api/models` | Search, filters, sort and pagination |
-| `GET /api/models/[slug]` | Model detail DTO |
-| `GET /api/models/compare?slugs=a,b` | Compare two to four models |
-| `GET /api/search?q=...` | Grouped model, lab and provider search |
-| `GET /api/rankings` | Benchmark leaderboard |
-| `GET /api/benchmarks` | Benchmark catalogue and model counts |
-| `GET /api/labs`, `GET /api/labs/[slug]` | AI lab directory and detail |
-| `GET /api/providers`, `GET /api/providers/[slug]` | Provider directory and provider-specific model prices |
-| `GET /api/filters` | Global filter values and ranges |
-| `GET /api/insights/price-performance` | Benchmark score and blended-price points |
+| TypeScript typecheck | Passed |
+| ESLint | Passed |
+| Vitest | 146 tests passed across 27 files |
+| Next.js production build | Passed |
+| Playwright / Chromium | 2 end-to-end tests passed |
+| GitHub Actions CI | Passed |
 
-Success responses use `{ data, meta? }`; failures use `{ error: { code, message, details? } }`. Query parameters are validated with Zod. Read endpoints use the configured shared cache policy.
+</details>
 
-## Data provenance and honesty
+The GitHub Actions workflow runs dependency installation, Prisma Client generation, linting, TypeScript checks, unit tests, and the production build. Playwright is maintained as a separate seeded-database smoke suite.
 
-The current offline fixture catalogue contains:
+---
 
-- 15 lab records and 10 provider records;
-- 8 benchmark definitions;
-- 62 model entries;
-- 80 benchmark-score rows covering 50 models.
+## Deployment
 
-**Do not treat the curated fixtures as vendor-verified catalogue data.** The model metadata (release dates, context sizes, modalities, capabilities, open-weight flags and descriptions), offering prices, model/provider associations, latency/throughput/quantization values and numeric benchmark scores are illustrative. All curated benchmark score rows use `source: "illustrative"`. Lab and provider names/websites are directory references; a listed association does not prove that a provider currently serves a model. See `data/curated/README.md` for the detailed provenance statement.
+OneAtlas is deployed as a **Node.js Web Service on Render**, with Neon PostgreSQL providing persistent database storage.
 
-Use these labels consistently:
+<div align="center">
 
-- **Real:** values fetched from a source integration such as a successfully executed OpenRouter sync. Record the source and retrieval context where the data model allows it.
-- **Curated:** values manually verified against cited public sources. Keep source URLs in the relevant records/documentation.
-- **Illustrative:** synthetic or otherwise unverified demo values. Never display them as published benchmark results or current provider quotes.
+### Live application
 
-The OpenRouter sync has been implemented and its response shape was reviewed, but the owner has not yet run it against a migrated database. Therefore this README does **not** claim that the current local fixtures have been refreshed from OpenRouter.
+[![Open OneAtlas](https://img.shields.io/badge/OPEN%20LIVE%20APPLICATION-OneAtlas-2563eb?style=for-the-badge&logo=render&logoColor=white)](https://oneatlas-glty.onrender.com)
 
-The detailed product spec targets 60–80 models; the separate M2 milestone text says 100+. The present 62-model fixture follows the detailed spec range. This scope discrepancy remains open and should be resolved before describing the 100+ target as met.
+**https://oneatlas-glty.onrender.com**
 
-## Known limitations and outstanding verification
+</div>
 
-1. **Database is not configured yet:** Neon project creation, migration application, seed execution and database SQL checks are deferred. Database-backed API behavior is not yet verified by curl.
-2. **No deployed live URL:** Vercel project/environment configuration, production migrations, production seed and live-site checks remain outstanding.
-3. **E2E not run:** Chromium download was interrupted previously. Re-run the documented install and Playwright smoke tests after the database is seeded.
-4. **Manual UI checks remain:** visually verify 375px, 768px and 1440px; keyboard navigation, focus order, contrast, reduced motion, mobile behavior and Lighthouse scores.
-5. **MVP filter counts are global, not faceted:** `/api/filters` reports global catalogue counts as documented in the spec.
-6. **No authentication or admin ingestion console:** this is a public discovery MVP; curated data changes use the seed/sync scripts.
-7. **Provider availability and price volatility:** fixture provider associations/prices are illustrative. Even source-backed pricing can change and should be refreshed before relying on it commercially.
-8. **Benchmark coverage and comparability:** benchmark data may be missing for a model; score interpretation must respect benchmark units and `higherIsBetter`. Illustrative scores are not independent evaluations.
-9. **Cost estimate scope:** calculator excludes cached-input discounts, taxes, provider minimum charges and other billing-specific adjustments.
-10. **Security audit follow-up:** the owner's `npm audit` output reported four high-severity findings associated with transitive `deepmerge-ts` and `effect` dependencies pulled through Prisma tooling. `npm audit fix --force` proposed upgrading Prisma to major version 7, which conflicts with the required Prisma 6 stack. Do not apply that forced upgrade; review a compatible Prisma 6 patch/update path and rerun the audit before production deployment.
-11. **Prisma config deprecation:** Prisma 6 emitted a warning that `package.json#prisma` seed configuration will be removed in Prisma 7. This is non-blocking for the pinned Prisma 6 stack, but should be migrated to `prisma.config.ts` as a separate, version-appropriate change before any Prisma major upgrade.
+### Render configuration
 
-## Technical decision log
+| Setting | Value |
+|---|---|
+| Runtime | Node |
+| Branch | `master` |
+| Region | Singapore |
+| Root directory | Repository root |
+| Build command | `npm ci && npm run build` |
+| Start command | `npx prisma migrate deploy && npm run start` |
+| Node version | `22.18.0` |
+| Health check path | `/api/health` |
 
-See [`docs/DECISIONS.md`](docs/DECISIONS.md) for the detailed decisions and trade-offs. The most important are the route → Zod → service → repository → mapper structure, Prisma Decimal conversion at the mapper boundary, PostgreSQL full-text/trigram search, URL-driven UI state, offline curated seeding, optional OpenRouter enrichment and explicit illustrative-data labelling.
+### Required environment variables
 
-## Final acceptance checklist
+| Variable | Purpose |
+|---|---|
+| `DATABASE_URL` | Neon pooled connection for runtime database queries. |
+| `DIRECT_URL` | Neon direct connection for Prisma migrations. |
+| `NODE_VERSION` | Node.js version `22.18.0`. |
 
-The authoritative, step-by-step checklist is [`docs/FINAL_TEST_PLAN.md`](docs/FINAL_TEST_PLAN.md). The project is not submission-ready until the database, HTTP/API, UI, Playwright, deployment, live-site, Loom and form-submission items are completed.
+Render provides the application port through the `PORT` environment variable.
+
+The configured start command applies pending committed migrations before starting the Next.js application.
+
+Never add database credentials to the source repository.
+
+---
+
+## Data provenance and limitations
+
+The current curated demo dataset contains:
+
+| Record type | Count |
+|---|---:|
+| AI labs / model organizations | 15 |
+| Inference providers | 10 |
+| Benchmark definitions | 8 |
+| Model catalogue entries | 62 |
+| Provider-model associations | 75 |
+| Benchmark score rows | 80 |
+
+Benchmark scores cover 50 models.
+
+**Important: This is a curated demonstration dataset, not a fully live, vendor-verified catalogue or pricing feed.**
+
+In particular:
+
+- Model release dates, context windows, output limits, modalities, capabilities, open-weight flags, and descriptions include illustrative fixture metadata.
+- Provider-model associations do not prove that a provider currently serves a particular model.
+- Provider prices, latency, throughput, and quantization values are illustrative and should not be treated as live quotes or service guarantees.
+- Benchmark names and source links identify public benchmark projects or papers, but the numeric fixture scores are synthetic demo values.
+- Curated benchmark score rows are marked with `source: "illustrative"`.
+- Optional OpenRouter enrichment does not convert illustrative benchmark scores into verified results.
+
+OneAtlas distinguishes three data categories:
+
+- **Real:** Retrieved from a source integration, with source and retrieval context recorded where supported.
+- **Curated:** Manually checked against cited public sources, with source URLs retained.
+- **Illustrative:** Synthetic or otherwise unverified demonstration values.
+
+The current `/api/filters` endpoint returns global counts and ranges rather than faceted counts. This is an intentional MVP behavior.
+
+See [`data/curated/README.md`](data/curated/README.md) for the fixture-level provenance statement and [`docs/DECISIONS.md`](docs/DECISIONS.md) for implementation decisions.
+
+---
+
+## Project documentation
+
+Additional project documentation:
+
+| Document | Description |
+|---|---|
+| [`docs/DECISIONS.md`](docs/DECISIONS.md) | Technical and product decisions. |
+| [`docs/FINAL_TEST_PLAN.md`](docs/FINAL_TEST_PLAN.md) | Manual acceptance and verification checklist. |
+| [`docs/LOOM_SCRIPT.md`](docs/LOOM_SCRIPT.md) | Project walkthrough outline for the demo recording. |
+| [`MILESTONES.md`](MILESTONES.md) | Project milestone tracker. |
+
+---
+
+<div align="center">
+
+## OneAtlas
+
+**Make AI model discovery and evaluation easier to navigate.**
+
+Discover. Evaluate. Compare.
+
+[Live Application](https://oneatlas-glty.onrender.com) · [GitHub Repository](https://github.com/aayushtiwari307/oneatlas)
+
+</div>
