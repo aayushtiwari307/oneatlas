@@ -1,0 +1,190 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum ModelType {
+  CHAT
+  EMBEDDING
+  IMAGE
+  AUDIO
+  VIDEO
+  RERANK
+}
+
+enum Modality {
+  TEXT
+  IMAGE
+  AUDIO
+  VIDEO
+  FILE
+}
+
+enum Capability {
+  TOOLS
+  VISION
+  REASONING
+  JSON_MODE
+  STRUCTURED_OUTPUT
+  WEB_SEARCH
+  CODE_EXECUTION
+  FINE_TUNING
+}
+
+enum BenchmarkCategory {
+  GENERAL
+  REASONING
+  CODING
+  MATH
+  KNOWLEDGE
+  MULTIMODAL
+  AGENTIC
+}
+
+enum RunStatus {
+  RUNNING
+  SUCCESS
+  PARTIAL
+  FAILED
+}
+
+model Lab {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  country     String?
+  website     String?
+  description String?
+  logoUrl     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  models Model[]
+}
+
+model Provider {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  website     String?
+  region      String?
+  description String?
+  logoUrl     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  offerings ModelProvider[]
+}
+
+model Model {
+  id               String       @id @default(cuid())
+  slug             String       @unique
+  externalId       String?      @unique // e.g. OpenRouter id, used for idempotent upserts
+  name             String
+  description      String?
+  labId            String
+  type             ModelType    @default(CHAT)
+  releaseDate      DateTime?
+  contextWindow    Int?
+  maxOutput        Int?
+  inputModalities  Modality[]
+  outputModalities Modality[]
+  capabilities     Capability[]
+  openWeights      Boolean      @default(false)
+
+  // Denormalized from the cheapest active ModelProvider (USD per 1M tokens).
+  // Refreshed after every ingestion so price sort/filter stays a simple indexed query.
+  minInputPrice  Decimal? @db.Decimal(12, 6)
+  minOutputPrice Decimal? @db.Decimal(12, 6)
+
+  // Maintained by a DB trigger (see prisma/sql/search_setup.sql). Never written by app code.
+  searchVector Unsupported("tsvector")?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  lab       Lab              @relation(fields: [labId], references: [id], onDelete: Restrict)
+  offerings ModelProvider[]
+  scores    BenchmarkScore[]
+
+  @@index([labId])
+  @@index([type])
+  @@index([releaseDate])
+  @@index([contextWindow])
+  @@index([minInputPrice])
+  @@index([minOutputPrice])
+  @@index([capabilities], type: Gin)
+  @@index([searchVector], type: Gin)
+  @@index([name(ops: raw("gin_trgm_ops"))], type: Gin)
+}
+
+model ModelProvider {
+  id                    String   @id @default(cuid())
+  modelId               String
+  providerId            String
+  inputPricePer1M       Decimal  @db.Decimal(12, 6)
+  outputPricePer1M      Decimal  @db.Decimal(12, 6)
+  cachedInputPricePer1M Decimal? @db.Decimal(12, 6)
+  contextWindow         Int?
+  maxOutput             Int?
+  latencyMs             Int?
+  throughputTps         Float?
+  quantization          String?
+  isActive              Boolean  @default(true)
+  updatedAt             DateTime @updatedAt
+
+  model    Model    @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  provider Provider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+
+  @@unique([modelId, providerId])
+  @@index([providerId])
+}
+
+model Benchmark {
+  id             String            @id @default(cuid())
+  slug           String            @unique
+  name           String
+  category       BenchmarkCategory
+  description    String?
+  unit           String            @default("%")
+  higherIsBetter Boolean           @default(true)
+  sourceUrl      String?
+
+  scores BenchmarkScore[]
+
+  @@index([category])
+}
+
+model BenchmarkScore {
+  id          String    @id @default(cuid())
+  modelId     String
+  benchmarkId String
+  score       Float
+  source      String?
+  measuredAt  DateTime?
+
+  model     Model     @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  benchmark Benchmark @relation(fields: [benchmarkId], references: [id], onDelete: Cascade)
+
+  @@unique([modelId, benchmarkId])
+  @@index([benchmarkId, score])
+}
+
+model IngestionRun {
+  id         String    @id @default(cuid())
+  source     String
+  status     RunStatus @default(RUNNING)
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+  fetched    Int       @default(0)
+  upserted   Int       @default(0)
+  rejected   Int       @default(0)
+  errors     Json?
+
+  @@index([source, startedAt])
+}
