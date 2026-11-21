@@ -38,22 +38,37 @@ async function loadSeededModels(page: Page, minimum: number): Promise<ModelFixtu
   return models;
 }
 
+/** Wait for the client-fetched catalogue before using its cards or filter options. */
+async function waitForCatalogue(page: Page): Promise<void> {
+  await expect(page.locator("article.model-card").first()).toBeVisible({
+    timeout: 30_000,
+  });
+}
+
 test.describe("OneAtlas seeded-database smoke tests", () => {
   test("search, filter and open a model detail page", async ({ page }) => {
     const [model] = await loadSeededModels(page, 1);
 
     await page.goto("/models");
     await expect(page.getByRole("heading", { name: "Explore AI models" })).toBeVisible();
+    await waitForCatalogue(page);
 
     const search = page.getByRole("searchbox", { name: "Search models" });
     await search.fill(model.name);
+
+    // Filter options are fetched alongside the model catalogue; wait for the
+    // specific enum value instead of selecting while only "All types" exists.
+    const modelTypeOption = page.locator(
+      `#type-desktop option[value="${model.type}"]`,
+    );
+    await expect(modelTypeOption).toHaveCount(1, { timeout: 30_000 });
     await page.locator("#type-desktop").selectOption(model.type);
 
     const modelHref = `/models/${encodeURIComponent(model.slug)}`;
     const modelLink = page.locator(
       `section[aria-label="Model search results"] a[href="${modelHref}"]`,
     ).first();
-    await expect(modelLink).toBeVisible();
+    await expect(modelLink).toBeVisible({ timeout: 30_000 });
     await modelLink.click();
 
     await expect(page.getByRole("heading", { name: model.name, exact: true })).toBeVisible();
@@ -71,12 +86,15 @@ test.describe("OneAtlas seeded-database smoke tests", () => {
 
     await page.goto("/models");
     await expect(page.getByRole("heading", { name: "Explore AI models" })).toBeVisible();
+    await waitForCatalogue(page);
 
     for (const model of models.slice(0, 2)) {
       const modelHref = `/models/${encodeURIComponent(model.slug)}`;
       const modelCard = page.locator(
         `article.model-card:has(a[href="${modelHref}"])`,
       );
+      await expect(modelCard).toBeVisible({ timeout: 30_000 });
+
       const addToCompare = modelCard.getByRole("button", {
         name: `Add ${model.name} to comparison`,
         exact: true,
