@@ -1,6 +1,6 @@
 # AGENTS.md - context for any AI assistant (Claude, GPT, Cursor...)
 
-Read this fully, then read MILESTONES.md and continue from the first unchecked item.
+Read this fully, then docs/SPEC.md (detailed contracts) and MILESTONES.md, and continue from the first unchecked item. docs/DECISIONS.md is the running decision log (Loom script); docs/FINAL_TEST_PLAN.md is what the owner runs at the end.
 
 ## Project
 OneAtlas: AI model discovery and intelligence platform (take-home, Full Stack role, 48h). Evaluated on architecture, integration, reliability, scalability, execution quality. The owner must be able to explain every decision in a Loom video, so prefer simple, readable code over clever code, and explain non-obvious choices in short comments.

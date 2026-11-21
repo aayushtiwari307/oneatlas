@@ -90,4 +90,5 @@ npm i -D prisma@6 tsx vitest @playwright/test
 ```
 
 ## Handoff notes (append newest at top)
+- 2026-11-21 Claude -> GPT. DONE locally: Next.js project created, deps installed (prisma/@prisma/client 6.19.x, zod 4.6.x, @types/node 22, tsx, vitest), kit files copied, first commit e1ab9d6. NOT DONE: Neon, migrations, Vercel, UI primitives, everything from M2 onward. UNVERIFIED (check the context snapshot first): `npx prisma validate` (trigram index syntax `ops: raw("gin_trgm_ops")`), `npm run typecheck`, and that package.json has scripts postinstall/typecheck/test/seed and `prisma.seed`. CHANGE: `sort` and `order` in `src/lib/validators/models.ts` are now optional (service resolves defaults, see docs/SPEC.md section 4). NEXT: M2a curated data files + Zod schemas, then M2b normalizers/seed/tests. DB work is intentionally deferred to the end; see docs/FINAL_TEST_PLAN.md.
 - (empty) M0 kit created by Claude. Nothing has been run or tested yet.

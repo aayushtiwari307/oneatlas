@@ -32,8 +32,10 @@ export const modelsQuerySchema = z.object({
   type: z.enum(TYPES).optional(),
   minContext: optNumber(0),
   maxPrice: optNumber(0), // USD per 1M input tokens, matched against cheapest provider
-  sort: z.enum(["release", "price", "context", "name", "relevance"]).default("release"),
-  order: z.enum(["asc", "desc"]).default("desc"),
+  // No defaults here on purpose: the service resolves them (q present -> relevance, else release;
+  // order depends on sort). See docs/SPEC.md section 4 and src/lib/query/models-query.ts.
+  sort: z.enum(["release", "price", "context", "name", "relevance"]).optional(),
+  order: z.enum(["asc", "desc"]).optional(),
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(100).default(24),
 });
