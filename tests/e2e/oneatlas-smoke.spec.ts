@@ -81,6 +81,26 @@ test.describe("OneAtlas seeded-database smoke tests", () => {
     await expect(page.getByRole("complementary", { name: "Model comparison tray" })).toBeVisible();
   });
 
+  test("search input keeps focus when the debounced URL query updates", async ({ page }) => {
+    await page.goto("/models");
+    await expect(page.getByRole("heading", { name: "Explore AI models" })).toBeVisible();
+    await waitForCatalogue(page);
+
+    const search = page.getByRole("searchbox", { name: "Search models" });
+    await search.click();
+    await page.keyboard.type("G");
+
+    // Wait beyond the 300 ms debounce and verify the URL update did not remount the input.
+    await expect(page).toHaveURL(/[?&]q=G(?:&|$)/);
+    await expect(search).toBeFocused();
+
+    // Continue typing through the keyboard without clicking the input again.
+    await page.keyboard.type("emini");
+    await expect(search).toHaveValue("Gemini");
+    await expect(page).toHaveURL(/[?&]q=Gemini(?:&|$)/);
+    await expect(search).toBeFocused();
+  });
+
   test("add two models and render the shareable comparison page", async ({ page }) => {
     const models = await loadSeededModels(page, 2);
 

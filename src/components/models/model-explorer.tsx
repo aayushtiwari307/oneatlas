@@ -58,9 +58,17 @@ type DebouncedSearchInputProps = {
   onCommit: (value: string) => void;
 };
 
-/** Local typing state is isolated from URL state; changing the URL key remounts this input. */
+/** Keeps local typing state aligned with URL changes without remounting the input. */
 function DebouncedSearchInput({ initialValue, onCommit }: DebouncedSearchInputProps) {
   const [draft, setDraft] = useState(initialValue);
+  const [previousInitialValue, setPreviousInitialValue] = useState(initialValue);
+
+  // Synchronize externally changed URL state during render, but preserve a newer
+  // local draft when the URL is catching up with a debounced keystroke.
+  if (initialValue !== previousInitialValue) {
+    setPreviousInitialValue(initialValue);
+    if (draft === previousInitialValue) setDraft(initialValue);
+  }
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -464,7 +472,6 @@ export function ModelExplorer() {
 
       <div className="mb-5 flex flex-col gap-3 sm:flex-row">
         <DebouncedSearchInput
-          key={queryState.q}
           initialValue={queryState.q}
           onCommit={commitSearch}
         />
